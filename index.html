@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Condition Code 44 | Independent Medical Case Review, Appeals &amp; Clinical Integration Consulting</title>
+<meta name="description" content="Independent medical case review, insurance appeals support, and clinical integration consulting for payers, providers, and patients.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#11161d;
+    --ink-soft:#1c2530;
+    --paper:#faf7f0;
+    --paper-dim:#efe7d6;
+    --teal:#3b6960;
+    --teal-deep:#1e3934;
+    --brass:#a9814c;
+    --brass-deep:#7d5f37;
+    --slate:#5c6570;
+    --line: rgba(17,22,29,0.14);
+    --line-soft: rgba(17,22,29,0.08);
+    --gold-line: rgba(169,129,76,0.45);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .mono{ font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em; }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 30px;}
+  ::selection{background:rgba(169,129,76,0.28);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  .gold-rule{ height:3px; background:linear-gradient(90deg, var(--brass-deep), var(--brass) 40%, var(--teal-deep) 100%); }
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,247,240,0.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:76px; }
+  .brand{
+    display:flex; align-items:baseline; gap:10px;
+    font-family:'Fraunces', serif; font-size:19px; font-weight:600;
+    text-decoration:none; letter-spacing:-0.01em;
+  }
+  .brand .mark{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; color:var(--paper); background:var(--teal-deep);
+    padding:3px 7px; border-radius:2px; letter-spacing:0.06em;
+  }
+  .nav-links{display:flex; gap:34px; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    text-decoration:none; font-size:14.5px; font-weight:500; color:var(--ink);
+    position:relative; padding-bottom:4px;
+  }
+  .nav-links a:after{
+    content:""; position:absolute; left:0; bottom:0; width:0; height:1px;
+    background:var(--brass); transition:width 0.25s ease;
+  }
+  .nav-links a:hover:after{width:100%;}
+  .nav-cta{
+    background:var(--ink); color:var(--paper); text-decoration:none;
+    font-size:13.5px; font-weight:600; padding:12px 22px; border-radius:2px;
+    letter-spacing:0.01em;
+    transition:background 0.2s ease, box-shadow 0.2s ease;
+  }
+  .nav-cta:hover{background:var(--teal-deep); box-shadow:0 2px 0 var(--brass);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:100px 0 108px;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(1100px 480px at 82% -12%, rgba(169,129,76,0.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(59,105,96,0.08), transparent 60%);
+  }
+  .hero .wrap{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:70px; align-items:center; }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:9px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.1em;
+    color:var(--brass-deep); text-transform:uppercase; margin-bottom:24px;
+  }
+  .eyebrow:before{content:""; width:26px; height:1px; background:var(--brass);}
+  .hero h1{
+    font-size:clamp(36px, 4.6vw, 56px);
+    line-height:1.06;
+    margin-bottom:24px;
+  }
+  .hero h1 em{ font-style:italic; color:var(--teal-deep); }
+  .hero p.lead{ font-size:18.5px; color:var(--slate); max-width:47ch; margin-bottom:34px; }
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--teal-deep); color:var(--paper); text-decoration:none;
+    padding:15px 28px; border-radius:2px; font-weight:600; font-size:15px;
+    display:inline-block; transition:background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow:0 1px 0 rgba(0,0,0,0.05);
+  }
+  .btn-primary:hover{background:var(--ink); transform:translateY(-1px); box-shadow:0 4px 14px rgba(17,22,29,0.22);}
+  .btn-ghost{
+    border:1px solid var(--line); color:var(--ink); text-decoration:none;
+    padding:15px 28px; border-radius:2px; font-weight:600; font-size:15px;
+    display:inline-block; transition:border-color 0.2s ease, background 0.2s ease;
+  }
+  .btn-ghost:hover{border-color:var(--brass); background:rgba(169,129,76,0.06);}
+
+  /* case document signature visual */
+  .case-doc{
+    background:#fffdf8;
+    border:1px solid var(--line);
+    border-radius:3px;
+    box-shadow: 10px 10px 0 var(--paper-dim), 10px 10px 0 1px var(--line), 0 24px 48px -20px rgba(17,22,29,0.25);
+    padding:28px 28px 24px;
+    position:relative;
+    transform:rotate(0.5deg);
+  }
+  .case-doc:before{
+    content:"INDEPENDENT REVIEW";
+    position:absolute; top:24px; right:-16px;
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; font-weight:500;
+    color:var(--brass-deep); border:1.5px solid var(--brass-deep); padding:5px 10px;
+    transform:rotate(8deg); border-radius:2px; letter-spacing:0.06em;
+    background:rgba(169,129,76,0.08);
+  }
+  .case-doc .doc-head{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    border-bottom:1px solid var(--line-soft); padding-bottom:15px; margin-bottom:18px;
+  }
+  .case-doc .doc-id{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--slate);}
+  .case-doc .doc-status{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--teal);
+    border:1px solid var(--teal); padding:3px 8px; border-radius:2px;
+  }
+  .doc-line{height:9px; background:var(--line-soft); border-radius:1px; margin-bottom:11px;}
+  .doc-line.w1{width:92%;} .doc-line.w2{width:78%;} .doc-line.w3{width:85%;} .doc-line.w4{width:60%;}
+  .doc-highlight{ background:rgba(169,129,76,0.28); padding:2px 4px; border-radius:1px; }
+  .doc-annot{
+    margin-top:20px; padding-top:15px; border-top:1px dashed var(--line);
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--teal-deep);
+    display:flex; align-items:center; gap:8px;
+  }
+  .doc-annot .dot{width:6px; height:6px; border-radius:50%; background:var(--brass);}
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:104px 0;}
+  .section-head{max-width:660px; margin-bottom:60px;}
+  .section-head .eyebrow{margin-bottom:15px;}
+  .section-head h2{font-size:clamp(29px,3.3vw,40px); line-height:1.15;}
+  .section-head p{color:var(--slate); font-size:16.5px; margin-top:15px;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--paper-dim); border-bottom:1px solid var(--line);}
+  .service-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .service-card{
+    background:var(--paper); padding:36px 32px; min-height:290px;
+    display:flex; flex-direction:column;
+    transition:background 0.2s ease;
+  }
+  .service-card:hover{ background:#fffdf8; }
+  .service-card .num{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--brass); margin-bottom:22px; }
+  .service-card h3{font-size:21.5px; margin-bottom:13px; line-height:1.25;}
+  .service-card p{color:var(--slate); font-size:15px; flex-grow:1;}
+  .service-card .tag{
+    margin-top:20px; font-family:'IBM Plex Mono', monospace; font-size:11.5px;
+    color:var(--teal-deep); text-transform:uppercase; letter-spacing:0.05em;
+  }
+
+  /* ---------- PROCESS ---------- */
+  .process-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
+  .process-item{
+    display:grid; grid-template-columns:82px 1fr 1.3fr; gap:30px;
+    padding:32px 0; border-bottom:1px solid var(--line);
+    align-items:start;
+  }
+  .process-item .step-num{ font-family:'IBM Plex Mono', monospace; font-size:14px; color:var(--brass); padding-top:4px; }
+  .process-item h3{font-size:19.5px;}
+  .process-item p{color:var(--slate); font-size:15px; margin:0;}
+
+  /* ---------- FEES / ENGAGEMENT ---------- */
+  .fees{background:var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .fee-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
+  .fee-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:3px;
+    padding:30px 28px; position:relative; overflow:hidden;
+  }
+  .fee-card:before{
+    content:""; position:absolute; top:0; left:0; right:0; height:3px;
+    background:linear-gradient(90deg, var(--brass-deep), var(--brass));
+  }
+  .fee-card h3{font-size:19px; margin-bottom:10px;}
+  .fee-card p{color:var(--slate); font-size:14.5px; margin-bottom:16px;}
+  .fee-card .price-tag{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--teal-deep);
+    border-top:1px solid var(--line-soft); padding-top:14px; display:block;
+  }
+  .fees-note{
+    margin-top:36px; padding:22px 26px; background:var(--paper);
+    border:1px dashed var(--gold-line); border-radius:3px;
+    font-size:15px; color:var(--ink);
+  }
+  .fees-note b{color:var(--brass-deep);}
+
+  /* ---------- CREDIBILITY / ABOUT ---------- */
+  .about{background:var(--ink); color:var(--paper); position:relative;}
+  .about .wrap{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center;}
+  .about .eyebrow{color:#c9ad82;}
+  .about .eyebrow:before{background:var(--brass);}
+  .about h2{color:var(--paper); font-size:clamp(27px,3.1vw,35px); margin-bottom:20px;}
+  .about p{color:rgba(250,247,240,0.72); font-size:16px; margin-bottom:17px;}
+  .stat-grid{display:grid; grid-template-columns:1fr 1fr; gap:30px;}
+  .stat{border-top:1px solid rgba(250,247,240,0.22); padding-top:15px;}
+  .stat .num{font-family:'Fraunces', serif; font-size:36px; color:var(--paper);}
+  .stat .label{font-family:'IBM Plex Mono', monospace; font-size:12px; color:#c9ad82; margin-top:6px; letter-spacing:0.03em;}
+
+  /* ---------- CONTACT ---------- */
+  .contact .wrap{display:grid; grid-template-columns:1fr 1fr; gap:70px;}
+  .contact h2{font-size:clamp(29px,3.3vw,37px); margin-bottom:17px;}
+  .contact p.lead{color:var(--slate); font-size:16.5px; max-width:44ch;}
+  .contact-points{margin-top:34px; list-style:none; padding:0;}
+  .contact-points li{
+    display:flex; gap:12px; font-size:15px; color:var(--slate);
+    padding:13px 0; border-top:1px solid var(--line-soft);
+  }
+  .contact-points li:first-child{border-top:none;}
+  .contact-points b{color:var(--ink); font-weight:600; min-width:120px; display:inline-block;}
+
+  form{background:var(--paper-dim); border:1px solid var(--line); padding:34px; border-radius:3px;}
+  .field{margin-bottom:19px;}
+  .field label{
+    display:block; font-family:'IBM Plex Mono', monospace; font-size:12px;
+    text-transform:uppercase; letter-spacing:0.04em; color:var(--slate); margin-bottom:7px;
+  }
+  .field input, .field select, .field textarea{
+    width:100%; padding:12px 13px; border:1px solid var(--line); border-radius:2px;
+    font-family:'Inter', sans-serif; font-size:15px; background:var(--paper); color:var(--ink);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:2px solid var(--teal); outline-offset:1px; border-color:var(--teal);
+  }
+  .field textarea{resize:vertical; min-height:100px;}
+  .submit-btn{
+    width:100%; background:var(--teal-deep); color:var(--paper); border:none;
+    padding:15px; font-size:15.5px; font-weight:600; border-radius:2px; cursor:pointer;
+    transition:background 0.2s ease;
+  }
+  .submit-btn:hover{background:var(--ink);}
+  .form-note{font-size:12.5px; color:var(--slate); margin-top:13px;}
+
+  /* ---------- DISCLAIMER STRIP ---------- */
+  .disclaimer{background:var(--paper-dim); border-top:1px solid var(--line); padding:28px 0;}
+  .disclaimer p{font-size:13px; color:var(--slate); max-width:920px; margin:0 auto;}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:46px 0; border-top:1px solid var(--line);}
+  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;}
+  footer .brand{font-size:16px;}
+  footer .foot-links{list-style:none; display:flex; gap:26px; padding:0; margin:0;}
+  footer .foot-links a{font-size:13.5px; color:var(--slate); text-decoration:none;}
+  footer .copy{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--slate);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 880px){
+    .nav-links{display:none;}
+    .hero .wrap{grid-template-columns:1fr;}
+    .case-doc{transform:none; margin-top:14px;}
+    .service-grid{grid-template-columns:1fr;}
+    .process-item{grid-template-columns:56px 1fr; }
+    .process-item p{grid-column:2 / 3;}
+    .fee-grid{grid-template-columns:1fr;}
+    .about .wrap{grid-template-columns:1fr;}
+    .contact .wrap{grid-template-columns:1fr;}
+    footer .wrap{flex-direction:column; align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<div class="gold-rule"></div>
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">Condition Code 44 <span class="mark">CC44</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#fees">Engagement</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Request a Review</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Independent &amp; Physician-Led</div>
+      <h1>The unbiased read <em>on the case that matters most.</em></h1>
+      <p class="lead">Condition Code 44 provides independent medical case review, insurance appeal support, and clinical integration consulting — built for patients, providers, and payers who need a decision they can trust.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Start a case review</a>
+        <a href="#services" class="btn-ghost">See how it works</a>
+      </div>
+    </div>
+    <div>
+      <div class="case-doc">
+        <div class="doc-head">
+          <span class="doc-id">CASE FILE / 2026-0417</span>
+          <span class="doc-status">UNDER REVIEW</span>
+        </div>
+        <div class="doc-line w1"></div>
+        <div class="doc-line w2"></div>
+        <div class="doc-line w3"></div>
+        <div class="doc-line w4"></div>
+        <p style="font-size:13px; color:var(--slate); margin:17px 0 5px;">Reviewer note —</p>
+        <p style="font-size:13.5px; color:var(--ink); line-height:1.55;">Prior denial reflects <span class="doc-highlight">incomplete review of treatment history</span>. Recommend reversal on appeal.</p>
+        <div class="doc-annot"><span class="dot"></span> Signed &amp; countersigned — board-certified reviewer</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Three ways we help you get the right decision.</h2>
+      <p>Each engagement is led by clinicians and consultants with direct experience in utilization review, appeals, and health-system operations.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="num mono">01</div>
+        <h3>Independent Medical Case Review</h3>
+        <p>A clinician-led, conflict-free review of diagnosis, treatment plans, or standard-of-care questions — for patients, attorneys, and organizations who need an objective second opinion on the record.</p>
+        <div class="tag">Second opinion · Record review</div>
+      </div>
+      <div class="service-card">
+        <div class="num mono">02</div>
+        <h3>Payment &amp; Coverage Appeals</h3>
+        <p>We build the clinical case behind an appeal — organizing documentation, citing medical necessity criteria, and drafting the appeal narrative for denied claims, prior authorizations, and coverage disputes.</p>
+        <div class="tag">Denials · Prior auth · Claims</div>
+      </div>
+      <div class="service-card">
+        <div class="num mono">03</div>
+        <h3>Clinical Integration Consulting</h3>
+        <p>For healthcare organizations improving how clinical teams, payers, and administrative workflows connect — care coordination design, utilization review process improvement, and integration strategy.</p>
+        <div class="tag">Workflow · Strategy · Operations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How A Review Moves</div>
+      <h2>A structured path from intake to decision.</h2>
+    </div>
+    <ul class="process-list">
+      <li class="process-item">
+        <div class="step-num mono">01</div>
+        <h3>Intake &amp; scope</h3>
+        <p>You share the case details and documentation. We confirm scope, timeline, and which type of review or appeal fits the situation.</p>
+      </li>
+      <li class="process-item">
+        <div class="step-num mono">02</div>
+        <h3>Clinical review</h3>
+        <p>A qualified reviewer examines the records against relevant clinical guidelines and medical necessity criteria, independent of any prior decision-maker.</p>
+      </li>
+      <li class="process-item">
+        <div class="step-num mono">03</div>
+        <h3>Findings &amp; report</h3>
+        <p>You receive a written opinion or appeal package with clear findings, citations, and recommended next steps.</p>
+      </li>
+      <li class="process-item">
+        <div class="step-num mono">04</div>
+        <h3>Support through resolution</h3>
+        <p>We remain available to answer questions from payers, providers, or counsel until the case reaches a decision.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="fees" id="fees">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Engagement &amp; Fees</div>
+      <h2>Structured to fit the work, not the other way around.</h2>
+      <p>Every case and every organization is different, so we scope fees to match — rather than forcing every engagement into one model.</p>
+    </div>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <h3>Hourly Consulting</h3>
+        <p>Best for open-ended advisory work — clinical integration strategy, ad hoc reviewer questions, or ongoing organizational support.</p>
+        <span class="price-tag">Rate discussed per engagement</span>
+      </div>
+      <div class="fee-card">
+        <h3>Per-Case Review</h3>
+        <p>A defined fee for a single independent review or appeal package, scoped once we understand the case complexity and documentation involved.</p>
+        <span class="price-tag">Quoted after intake</span>
+      </div>
+      <div class="fee-card">
+        <h3>Retainer</h3>
+        <p>For health systems and practices that need recurring access to independent review or clinical integration support over time.</p>
+        <span class="price-tag">Custom monthly terms</span>
+      </div>
+    </div>
+    <div class="fees-note">
+      <b>Open to discussion —</b> if an hourly rate works better for your organization than a flat case fee, we're glad to talk it through and land on a structure that fits both sides.
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Why Independent Matters</div>
+      <h2>No financial stake in the outcome — only the correct one.</h2>
+      <p>Reviewers at Condition Code 44 are never employed by, or paid based on the outcome of, the payer or provider involved in a case. That separation is the entire point: a review that holds up because nothing about it was steered.</p>
+      <p>We work directly with patients and families, as well as with attorneys, medical groups, and health plans that need a defensible, well-documented opinion.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">100%</div><div class="label">Conflict-free reviewers</div></div>
+      <div class="stat"><div class="num">3</div><div class="label">Core service lines</div></div>
+      <div class="stat"><div class="num">1:1</div><div class="label">Case-by-case attention</div></div>
+      <div class="stat"><div class="num">A–Z</div><div class="label">Intake to resolution support</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Tell us about the case.</h2>
+      <p class="lead">Share a few details and we'll follow up to confirm whether we're the right fit, what a review would involve, and how fees would work for it.</p>
+      <ul class="contact-points">
+        <li><b>Response time</b> Within 2 business days</li>
+        <li><b>Confidential</b> Records handled under strict confidentiality</li>
+        <li><b>No obligation</b> Initial scoping call is free</li>
+      </ul>
+    </div>
+    <form id="inquiry-form">
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="type">Inquiry type</label>
+        <select id="type" name="type">
+          <option>Independent medical case review</option>
+          <option>Payment or coverage appeal</option>
+          <option>Clinical integration consulting</option>
+          <option>Other / not sure</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Case summary</label>
+        <textarea id="message" name="message" placeholder="Briefly describe the situation — no need for full records yet." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send inquiry</button>
+      <p class="form-note">This form does not send protected health information. Please describe your situation in general terms; we'll provide a secure channel for records once we connect.</p>
+    </form>
+  </div>
+</section>
+
+<div class="disclaimer">
+  <div class="wrap">
+    <p>Condition Code 44 provides independent clinical review and consulting services and does not provide direct medical treatment or emergency care. Findings are advisory and intended to support — not replace — decisions made by treating physicians, payers, or legal counsel. If you are experiencing a medical emergency, call 911 or your local emergency number.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="brand">Condition Code 44</a>
+    <ul class="foot-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#fees">Engagement</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <span class="copy">© 2026 Condition Code 44</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('inquiry-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var type = document.getElementById('type').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var subject = encodeURIComponent('New inquiry: ' + type);
+    var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+    window.location.href = 'mailto:dmgoyalmd@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+</body>
+</html>
