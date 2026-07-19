@@ -236,6 +236,19 @@
   .stat .num{font-family:'Fraunces', serif; font-size:36px; color:var(--paper);}
   .stat .label{font-family:'IBM Plex Mono', monospace; font-size:12px; color:#c9ad82; margin-top:6px; letter-spacing:0.03em;}
 
+  /* ---------- FOUNDER ---------- */
+  .founder{background:var(--paper-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .founder-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:3px;
+    padding:38px 40px; position:relative; max-width:800px;
+  }
+  .founder-card:before{
+    content:""; position:absolute; top:0; left:0; bottom:0; width:3px;
+    background:linear-gradient(180deg, var(--brass-deep), var(--teal-deep));
+  }
+  .founder-card h3{font-size:21px; margin-bottom:16px; color:var(--ink);}
+  .founder-card p{color:var(--slate); font-size:16px; margin:0;}
+
   /* ---------- CONTACT ---------- */
   .contact .wrap{display:grid; grid-template-columns:1fr 1fr; gap:70px;}
   .contact h2{font-size:clamp(29px,3.3vw,37px); margin-bottom:17px;}
@@ -308,6 +321,7 @@
       <li><a href="#process">Process</a></li>
       <li><a href="#fees">Engagement</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#founder">Physician</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Request a Review</a>
@@ -451,6 +465,19 @@
   </div>
 </section>
 
+<section class="founder" id="founder">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Who's Behind The Review</div>
+      <h2>A physician who's seen both sides of the decision.</h2>
+    </div>
+    <div class="founder-card">
+      <h3>Dr. Deepak Manmohan Goyal, MD, MBA, FACP, FACHE</h3>
+      <p>Dr. Goyal began his career as a board-certified internal medicine physician, treating patients directly in rural and hospital settings. That clinical foundation carried him into physician leadership — serving as Medical Director and Chief of Staff — and from there into executive roles overseeing revenue cycle, care management, and operations for major health systems. He serves on the board of the South Dakota State Medical Association and now advises organizations on aligning clinical care with financial and operational strategy, bringing that same progression — bedside to boardroom — to every engagement.</p>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="wrap">
     <div>
@@ -505,6 +532,7 @@
       <li><a href="#process">Process</a></li>
       <li><a href="#fees">Engagement</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#founder">Physician</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <span class="copy">© 2026 Condition Code 44</span>
